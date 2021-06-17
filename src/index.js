@@ -67,3 +67,14 @@ const [name1, age1] = arr;
 
 const mes3 = `私は${name1}です。年齢は${age1}ですa`;
 console.log(mes3);
+
+/**
+ * デフォルト値
+ */
+// デフォルト値なしの場合
+const hel = (name) => console.log(`hello ${name}`);
+hel();
+
+const hel2 = (name = "ゲスト") => console.log(`hello ${name}`);
+hel2();
+hel2("aaa");
