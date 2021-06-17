@@ -41,3 +41,29 @@ const fnc6 = (x, y) => {
 };
 
 console.log(fnc6(1, 2));
+
+/**
+ * 分割代入
+ */
+
+// 従来のやり方
+const myprof = {
+  name: "田中",
+  age: "23"
+};
+
+const mes1 = `私は${myprof.name}です。年齢は${myprof.age}です`;
+console.log(mes1);
+
+// 分割代入
+const { name, age } = myprof;
+const mes2 = `俺は${name}だ。${age}歳だよ`;
+console.log(mes2);
+
+// 配列でもできる
+const arr = ["佐藤", "50"];
+// 配列の順場に分割代入される
+const [name1, age1] = arr;
+
+const mes3 = `私は${name1}です。年齢は${age1}ですa`;
+console.log(mes3);
