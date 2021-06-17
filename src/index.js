@@ -78,3 +78,43 @@ hel();
 const hel2 = (name = "ゲスト") => console.log(`hello ${name}`);
 hel2();
 hel2("aaa");
+
+/**
+ * スプレッド構文
+ */
+
+// 配列の展開
+const arr1 = [1, 2];
+console.log(arr1);
+console.log(...arr1);
+
+const sumFunc = (x, y) => console.log(x + y);
+sumFunc(arr1[0], arr1[1]);
+sumFunc(...arr1);
+
+// まとめる
+const arr2 = [1, 2, 3, 4, 5];
+const [n1, n2, ...n3] = arr2;
+
+console.log(n1);
+console.log(n2);
+console.log(n3);
+
+// 配列のコピー、結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+// コピー
+// ※ 要素を変更しても、コピー元の配列に影響なし
+const arr6 = [...arr4];
+console.log(arr6);
+
+// 結合
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
+
+const arr8 = [50, 60];
+// コピーできていない例
+const arr9 = arr8;
+arr9[0] = -1;
+console.log(arr8);
