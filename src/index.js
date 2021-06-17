@@ -118,3 +118,42 @@ const arr8 = [50, 60];
 const arr9 = arr8;
 arr9[0] = -1;
 console.log(arr8);
+
+/**
+ * map や filter を使った配列処理
+ */
+// 従来のやり方
+const narr = ["あああ", "いいい", "ううう"];
+for (let idx = 0; idx < narr.length; idx++) {
+  console.log(narr[idx]);
+}
+
+// map
+const narr2 = narr.map((name) => {
+  return name;
+});
+
+console.log(narr2);
+
+narr.map((name) => console.log(name));
+
+// filter
+const narr3 = [1, 2, 3, 4, 5];
+const newarr = narr3.filter((n) => {
+  return n % 2 === 1;
+});
+
+console.log(newarr);
+
+// mapやfilterの場合、第二引数が要素の添え字を表す変数になる
+narr.map((name, i) => console.log(`${i + 1}番目は${name}です。`));
+
+const newarr2 = narr.map((name) => {
+  if (name === "いいい") {
+    return name;
+  } else {
+    return name + "さん";
+  }
+});
+
+console.log(newarr2);
