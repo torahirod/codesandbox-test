@@ -158,15 +158,38 @@
 
 // console.log(newarr2);
 
-/**
- * 三項演算子
- */
-// 条件 ? Trueのとき : Falseのとき
-const vall = 1 < 0 ? "Trueです" : "Falseです";
-console.log(vall);
+// /**
+//  * 三項演算子
+//  */
+// // 条件 ? Trueのとき : Falseのとき
+// const vall = 1 < 0 ? "Trueです" : "Falseです";
+// console.log(vall);
 
-const num = "1300";
+// const num = "1300";
 
-// 条件 ? Trueのとき : Falseのとき
-const fnum = typeof num === "number" ? num.toLocaleString() : "数字以外です";
-console.log(fnum);
+// // 条件 ? Trueのとき : Falseのとき
+// const fnum = typeof num === "number" ? num.toLocaleString() : "数字以外です";
+// console.log(fnum);
+
+// /**
+//  * 論理演算子
+//  */
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("1か2はtrue")
+// }
+// if (flag1 && flag2) {
+//   console.log("1も2もTrue")
+// }
+
+// || は左側がfalseなら右側を返す
+const num1 = null;
+const fee = num1 || "未設定";
+console.log(fee);
+
+// && は左側がTrueなら右側を返す
+const num2 = 100;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
